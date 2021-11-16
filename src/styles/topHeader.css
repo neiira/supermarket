@@ -1,0 +1,26 @@
+.top-header {
+  background-color: #333333;
+  height: 58px;
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.top-header-account li a {
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.top-header-account li {
+  list-style: none;
+}
+.top-header-account {
+  display: inline-flex;
+}
+
+.top-header-p a {
+  text-decoration: none;
+  color: #fd7e14;
+}

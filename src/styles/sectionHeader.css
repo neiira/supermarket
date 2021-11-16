@@ -1,0 +1,19 @@
+.sectionTitleClass::after {
+  content: '';
+  background: #3399cc;
+  height: 2px;
+  width: 15%;
+  position: absolute;
+  bottom: 0%;
+  left: 43%;
+}
+
+.sectionTitleClass {
+  font-weight: bold;
+  text-align: center;
+  color: #212121;
+  padding-bottom: 0.5em;
+  position: relative;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
