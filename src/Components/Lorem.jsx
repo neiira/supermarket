@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import '../Supermarket.css';
 import '../styles/lorem.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

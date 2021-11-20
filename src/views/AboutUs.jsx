@@ -9,11 +9,8 @@ import BreadCrumb from '../Components/BreadCrumb';
 function AboutUs() {
   return (
     <>
-      <Header />
-      <MegaMenu />
       <BreadCrumb prevPage="Home" currentPage="About us" />
       <AboutUsBody />
-      <Footer />
     </>
   );
 }

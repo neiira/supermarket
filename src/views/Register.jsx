@@ -9,11 +9,8 @@ import RegisterBody from '../Components/RegisterBody';
 function Register() {
   return (
     <>
-      <Header />
-      <MegaMenu />
       <BreadCrumb prevPage="Home" currentPage="Register Page" />
       <RegisterBody />
-      <Footer />
     </>
   );
 }

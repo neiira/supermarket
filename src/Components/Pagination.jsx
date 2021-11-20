@@ -4,16 +4,16 @@ import '../Supermarket.css';
 function Pagination() {
   return (
     <>
-      <nav class="numbering">
-        <ul class="pagination paging">
+      <nav className="numbering">
+        <ul className="pagination paging">
           <li>
             <a href="#" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="active">
+          <li className="active">
             <a href="#">
-              1<span class="sr-only">(current)</span>
+              1<span className="sr-only">(current)</span>
             </a>
           </li>
           <li>

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/offerHeader.css';
-
+// import '../styles/offerHeader.css';
+import '../Supermarket.css';
 function OfferHeader({ title, offerDescription }) {
   return (
     <>

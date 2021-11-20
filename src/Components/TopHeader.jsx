@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/topHeader.css';
+import '../Supermarket.css';
+// import '../styles/topHeader.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Container } from 'react-bootstrap';
@@ -41,10 +42,10 @@ function TopHeader() {
                   </ul>
                 </Col>
                 <Col>
-                  <form action="#" method="post" class="last">
+                  <form action="#" method="post" className="last">
                     <input type="hidden" name="cmd" value="_cart" />
                     <input type="hidden" name="display" value="1" />
-                    <button class="w3view-cart" type="submit" name="submit" value="">
+                    <button className="w3view-cart" type="submit" name="submit" value="">
                       <FontAwesomeIcon icon={faCartArrowDown} className="cart" size="lg" />
                     </button>
                   </form>

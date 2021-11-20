@@ -1,69 +1,162 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/megaMenu.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, NavLink, NavDropdown, Container } from 'react-bootstrap';
 
 function MegaMenu() {
+  const dropDownStyle = { fontWeight: '500 !important', color: '#999 !important', fontSize: '14px' };
+  const dropTitle = { color: '#fe9126', paddingBottom: '1rem', fontSize: '20px' };
   return (
     <>
       <Navbar bg="mega-menu" expand="lg">
-        <Container className="justify-content-end justify-content-lg-between">
+        <Container className="justify-content-end justify-content-md-between">
           <Navbar.Toggle className="justify-self-end" />
           <Navbar.Collapse>
             <Nav>
-              <Nav.Link href="home.html" className="text-white pr-5">
+              <Link to="/" className=" text-white text-decoration-none px-3 nav-link">
                 Home
-              </Nav.Link>
-              <NavDropdown title="Groceries" className="text-white">
-                <NavDropdown.Item>All Groceries</NavDropdown.Item>
+              </Link>
+              <NavDropdown title="Groceries" className="text-white px-2">
+                <NavDropdown.Item style={dropTitle}>All Groceries</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="Groceries.html">Dals and Pulses</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Almonds</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Cashew</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Rice and Rice products</NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/groceries" className="text-decoration-none text-secondary">
+                    Dals and Pulses
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/groceries" className="text-decoration-none text-secondary">
+                    Almonds
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/groceries" className="text-decoration-none text-secondary">
+                    Cashew
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/groceries" className="text-decoration-none text-secondary">
+                    Rice and Rice products
+                  </Link>
+                </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Household">
-                <NavDropdown.Item>All Groceries</NavDropdown.Item>
+              <NavDropdown title="Household" className="px-2">
+                <NavDropdown.Item style={dropTitle}>All HouseHold</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="Groceries.html">Dals and Pulses</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Almonds</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Cashew</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Rice and Rice products</NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/household" className="text-decoration-none text-secondary">
+                    Cookware
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/household" className="text-decoration-none text-secondary">
+                    Dust pan
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/household" className="text-decoration-none text-secondary">
+                    Scrubbers
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/household" className="text-decoration-none text-secondary">
+                    Dust Cloth
+                  </Link>
+                </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Personal Care">
-                <NavDropdown.Item>All Groceries</NavDropdown.Item>
+              <NavDropdown title="Personal Care" className="px-2">
+                <NavDropdown.Item style={dropTitle}>All Groceries</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="Groceries.html">Dals and Pulses</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Almonds</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Cashew</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Rice and Rice products</NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/personalcare" className="text-decoration-none text-secondary">
+                    Baby care
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/personalcare" className="text-decoration-none text-secondary">
+                    Baby Care Accessories
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/personalcare" className="text-decoration-none text-secondary">
+                    Baby Oil and Shampoo
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/personalcare" className="text-decoration-none text-secondary">
+                    Baby Powder
+                  </Link>
+                </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Packaged Foods">
-                <NavDropdown.Item>All Groceries</NavDropdown.Item>
+              <NavDropdown title="Packaged Foods" className="px-2">
+                <NavDropdown.Item style={dropTitle}>All Groceries</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="Groceries.html">Dals and Pulses</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Almonds</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Cashew</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Rice and Rice products</NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/packagedfood" className="text-decoration-none text-secondary">
+                    Chips
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/packagedfood" className="text-decoration-none text-secondary">
+                    Biscuit
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/packagedfood" className="text-decoration-none text-secondary">
+                    Baby foods
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/packagedfood" className="text-decoration-none text-secondary">
+                    Canned foods
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/packagedfood" className="text-decoration-none text-secondary">
+                    Chocolate ans Sweets
+                  </Link>
+                </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Beverage">
-                <NavDropdown.Item>All Groceries</NavDropdown.Item>
+              <NavDropdown title="Beverage" className="px-3">
+                <NavDropdown.Item style={dropTitle}>All Groceries</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="Groceries.html">Dals and Pulses</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Almonds</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Cashew</NavDropdown.Item>
-                <NavDropdown.Item href="Groceries.html">Rice and Rice products</NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/beverage" className="text-decoration-none text-secondary">
+                    Coca cola
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/beverage" className="text-decoration-none text-secondary">
+                    Juices
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/beverage" className="text-decoration-none text-secondary">
+                    Coca cola
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/beverage" className="text-decoration-none text-secondary">
+                    Instant Coffee
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item style={dropDownStyle}>
+                  <Link to="/beverage" className="text-decoration-none text-secondary">
+                    Tea
+                  </Link>
+                </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="home.html" className="text-white">
+              <Link to="/gourmet" className="text-white text-decoration-none px-3 nav-link">
                 Gourment
-              </Nav.Link>
-              <Nav.Link href="home.html" className="text-white">
+              </Link>
+              <Link to="/offer" className="text-white text-decoration-none px-3 nav-link">
                 Offer
-              </Nav.Link>
-              <Nav.Link href="home.html" className="text-white ">
-                Contacts
-              </Nav.Link>
+              </Link>
+              <Link to="/contact" className="text-white text-decoration-none nav-link">
+                Contact
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -12,7 +12,7 @@
 .phone {
   /* margin-left: -25px; */
   margin-right: 10px;
-  font-size: 17px;
+  /* font-size: 17px; */
 }
 
 .w3_footer_grid ul.address li .address {
@@ -29,9 +29,13 @@
   font-weight: 700;
 }
 .starBlue {
-  color: #3399cc;
+  color: hsl(200, 60%, 50%);
 }
 
 .starGray {
   color: #808080;
+}
+
+.contact-card {
+  margin-right: 1rem;
 }

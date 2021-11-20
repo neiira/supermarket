@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/offers.css';
+// import '../styles/offers.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../Supermarket.css';
 import SectionHeader from '../Components/SectionHeader';
 import Productcard from '../Components/Productcard';
 

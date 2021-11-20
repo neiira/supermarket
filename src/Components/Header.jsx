@@ -1,72 +1,73 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown, faSearch, faPhone } from '@fortawesome/free-solid-svg-icons';
-// import '../icon/icon.css';
+import '../icon/icon.css';
 
 function Header() {
   return (
     <>
-      <div class="agileits_header">
-        <div class="container">
-          <div class="w3l_offers">
+      <div className="agileits_header">
+        <div className="container">
+          <div className="w3l_offers">
             <p>
               SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a>
             </p>
           </div>
-          <div class="agile-login">
+          <div className="agile-login">
             <ul>
               <li>
-                <a href="registered.html"> Create Account </a>
+                <Link to="/register"> Create Account </Link>
               </li>
               <li>
-                <a href="login.html">Login</a>
+                <Link to="/login">Login</Link>
               </li>
               <li>
-                <a href="contact.html">Help</a>
+                <Link to="/contact">Help</Link>
               </li>
             </ul>
           </div>
-          <div class="product_list_header">
-            <form action="#" method="post" class="last">
+          <div className="product_list_header">
+            <form action="#" method="post" className="last">
               <input type="hidden" name="cmd" value="_cart" />
               <input type="hidden" name="display" value="1" />
-              <button class="w3view-cart" type="submit" name="submit" value="">
+              <button className="w3view-cart" type="submit" name="submit" value="">
                 <FontAwesomeIcon icon={faCartArrowDown} className="cart" size="lg" />
               </button>
             </form>
           </div>
-          <div class="clearfix"> </div>
+          <div className="clearfix"> </div>
         </div>
       </div>
 
-      <div class="logo_products">
-        <div class="container">
-          <div class="w3ls_logo_products_left1">
-            <ul class="phone_email">
+      <div className="logo_products">
+        <div className="container">
+          <div className="w3ls_logo_products_left1">
+            <ul className="phone_email">
               <li>
                 <FontAwesomeIcon icon={faPhone} className="phone" rotation={90} />
                 Order online or call us : (+0123) 234 567
               </li>
             </ul>
           </div>
-          <div class="w3ls_logo_products_left">
+          <div className="w3ls_logo_products_left">
             <h1>
               <a href="index.html">super Market</a>
             </h1>
           </div>
-          <div class="w3l_search">
+          <div className="w3l_search">
             <form action="#" method="post">
               <input type="search" name="Search" placeholder="Search for a Product..." required="" />
-              <button type="submit" class="btn btn-default search" aria-label="Left Align">
+              <button type="submit" className="btn btn-default search" aria-label="Left Align">
                 <FontAwesomeIcon icon={faSearch} className="search" />
               </button>
-              <div class="clearfix"></div>
+              <div className="clearfix"></div>
             </form>
           </div>
 
-          <div class="clearfix"> </div>
+          <div className="clearfix"> </div>
         </div>
       </div>
     </>

@@ -9,10 +9,10 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 function Sidebar() {
   return (
     <>
-      <div class="products-left">
-        <div class="categories">
+      <div className="products-left">
+        <div className="categories">
           <h2>Categories</h2>
-          <ul class="cate">
+          <ul className="cate">
             <li>
               <a href="products.html">
                 <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />

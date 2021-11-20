@@ -1,4 +1,5 @@
 import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import img11 from '../images/11.jpg';
@@ -10,23 +11,22 @@ function FadeCarousel() {
     <>
       <Carousel fade interval={3000} pause={false} indicators={false} controls={false}>
         <Carousel.Item>
-          <img className="d-block w-100" src={img11} alt="First slide" />
+          <img className="d-block w-100 opacity-1" src={img11} alt="First slide" />
           <Carousel.Caption>
-            <h1>BUY RICE PRODUCTS ARE NOW ON LINE WITH US</h1>
+            <h1 style={{ paddingBottom: '150px' }}>BUY RICE PRODUCTS ARE NOW ON LINE WITH US</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={img22} alt="Second slide" />
-
+          <img className="d-block w-100 opacity-1" src={img22} alt="Second slide" />
           <Carousel.Caption>
-            <h1>WHOLE SPICES PRODUCTS ARE NOW ON LINE WITH US</h1>
+            <h1 style={{ paddingBottom: '150px' }}>WHOLE SPICES PRODUCTS ARE NOW ON LINE WITH US</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={img44} alt="Third slide" />
+          <img className="d-block w-100 opacity-1" src={img44} alt="Third slide" />
 
           <Carousel.Caption>
-            <h1>WHOLE SPICES PRODUCTS ARE NOW ON LINE WITH US</h1>
+            <h1 style={{ paddingBottom: '150px' }}>WHOLE SPICES PRODUCTS ARE NOW ON LINE WITH US</h1>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

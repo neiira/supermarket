@@ -9,11 +9,8 @@ import BreadCrumb from '../Components/BreadCrumb';
 function Faq() {
   return (
     <>
-      <Header />
-      <MegaMenu />
       <BreadCrumb prevPage="Home" currentPage="FAQs" />
       <FaqBody />
-      <Footer />
     </>
   );
 }

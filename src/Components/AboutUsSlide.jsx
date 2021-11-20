@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function AboutUsSlide() {
   return (
     <>
-      <div class="about-slid agileits-w3layouts">
-        <div class="container">
-          <div class="about-slid-info">
+      <div className="about-slid agileits-w3layouts">
+        <div className="container">
+          <div className="about-slid-info">
             <h2>Lorem Ipsum is that it has a moreless normal</h2>
             <p>
               Lorem Ipsum generators on the Internet tend to repeat predefined chunks on the Internet tend as necessary,

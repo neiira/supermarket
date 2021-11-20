@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/brandsStore.css';
+// import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionHeader from '../Components/SectionHeader';
 import Lorem from '../Components/Lorem';
@@ -9,7 +10,7 @@ function BrandsStore() {
     <>
       <div className="brands">
         <SectionHeader sectionTitle="Brand store" />
-        <div className="container brands-container">
+        <div className="container brands-container ">
           <Lorem />
           <Lorem />
           <Lorem />

@@ -1,8 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionHeader from '../Components/SectionHeader';
-import '../styles/registerBody.css';
-import '../styles/common.css';
+// import '../styles/registerBody.css';
+// import '../styles/common.css';
+import '../Supermarket.css';
 
 function RegisterBody() {
   return (

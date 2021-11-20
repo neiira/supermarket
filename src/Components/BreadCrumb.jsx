@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/breadCrumb.css';
+// import '../styles/breadCrumb.css';
+import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';

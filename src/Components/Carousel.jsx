@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/js/bootstrap.js';
+import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import carosuselImg1 from '../images/b1.jpg';
 import carosuselImg2 from '../images/b3.jpg';
@@ -7,13 +7,13 @@ import carosuselImg2 from '../images/b3.jpg';
 function Carousel() {
   return (
     <>
-      <div id="imageCarouselIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+      <div id="imageCarouselIndicators" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#imageCarouselIndicators"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -30,17 +30,17 @@ function Carousel() {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
             <a href="beverages.html">
-              <img src={carosuselImg2} class="d-block w-100" alt="First slide" />
+              <img src={carosuselImg2} className="d-block w-100" alt="First slide" />
             </a>
           </div>
-          <div class="carousel-item">
-            <img src={carosuselImg2} class="d-block w-100" alt="Second slide" />
+          <div className="carousel-item">
+            <img src={carosuselImg2} className="d-block w-100" alt="Second slide" />
           </div>
-          <div class="carousel-item">
-            <img src={carosuselImg1} class="d-block w-100" alt="Third slide" />
+          <div className="carousel-item">
+            <img src={carosuselImg1} className="d-block w-100" alt="Third slide" />
           </div>
         </div>
       </div>
