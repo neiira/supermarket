@@ -10,7 +10,7 @@ function BrandsStore() {
     <>
       <div className="brands">
         <SectionHeader sectionTitle="Brand store" />
-        <div className="container brands-container ">
+        <div className="container brands-container p-0">
           <Lorem />
           <Lorem />
           <Lorem />

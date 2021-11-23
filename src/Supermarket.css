@@ -1929,8 +1929,8 @@ a.callbacks1_s3:focus {
 .about-team-grids {
   background: #3399cc;
   padding: 2em 1em;
-  margin-left: 5px;
-  width: 24.5%;
+  /* margin-left: 5px; */
+  /* width: 24.5%; */
 }
 .about-team-grids img {
   width: 100%;
@@ -2596,7 +2596,8 @@ h3.agileits-icons-title {
     width: 65%;
   }
   .about-team-grids {
-    width: 24.4%;
+    /* width: 24.4%; */
+    /* width: auto; */
   }
   .about-team-grids h4 {
     font-size: 0.9em;
@@ -2722,8 +2723,8 @@ h3.agileits-icons-title {
     width: 100%;
   }
   .about-team-grids {
-    margin-left: 16px;
-    width: 47%;
+    /* margin-left: 16px; */
+    /* width: 47%; */
     float: left;
     padding: 2em 2em;
     margin-bottom: 20px;
@@ -3033,7 +3034,7 @@ h3.agileits-icons-title {
     width: 58%;
   }
   .about-team-grids {
-    width: 46%;
+    /* width: 46%; */
   }
   .checkout-left-basket {
     width: 49%;

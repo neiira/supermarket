@@ -13,111 +13,113 @@ function Footer() {
     <>
       <div className="footer">
         <div className="container">
-          <div className="row w3_footer_grids">
-            <div className="col-md-3 w3_footer_grid">
-              <h3>Contact</h3>
-              <ul className="address">
-                <li>
-                  <FontAwesomeIcon icon={faMapMarker} className="address" />
-                  1234k Avenue, 4th block, <span>New York City.</span>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faEnvelope} className="address" />
+          <div className="w3_footer_grids">
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-sm-6 w3_footer_grid">
+                <h3>Contact</h3>
+                <ul className="address">
+                  <li>
+                    <FontAwesomeIcon icon={faMapMarker} className="address" />
+                    1234k Avenue, 4th block, <span>New York City.</span>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faEnvelope} className="address" />
 
-                  <a href="mailto:info@example.com">info@example.com</a>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faPhone} className="address" />
-                  +1234 567 567
-                </li>
-              </ul>
+                    <a href="mailto:info@example.com">info@example.com</a>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faPhone} className="address" />
+                    +1234 567 567
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-3 col-md-6 col-sm-6 w3_footer_grid">
+                <h3>Information</h3>
+                <ul className="info">
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/aboutus">About Us</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/contact">Contact Us</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/contact">Short Codes</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/faqs">FAQ's</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <a href="products.html">Special Products</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-3 col-md-6 col-sm-6 w3_footer_grid">
+                <h3>Category</h3>
+                <ul className="info">
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/groceries">Groceries</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/household">House hold</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/personalcare">Personal Care</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/packagedfood">Packaged Food</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <a href="beverages.html">Beverages</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-3 col-md-6 col-sm-6 w3_footer_grid">
+                <h3>Profile</h3>
+                <ul className="info">
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/store">Store</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/checkout">Check Out</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/login">Login</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/register">Create Account</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="clearfix"> </div>
             </div>
-            <div className="col-md-3 w3_footer_grid">
-              <h3>Information</h3>
-              <ul className="info">
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/aboutus">About Us</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/contact">Contact Us</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/contact">Short Codes</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/faqs">FAQ's</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <a href="products.html">Special Products</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-3 w3_footer_grid">
-              <h3>Category</h3>
-              <ul className="info">
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/groceries">Groceries</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/household">House hold</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/personalcare">Personal Care</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/packagedfood">Packaged Food</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <a href="beverages.html">Beverages</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-3 w3_footer_grid">
-              <h3>Profile</h3>
-              <ul className="info">
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/store">Store</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/checkout">Check Out</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/login">Login</Link>
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-
-                  <Link to="/register">Create Account</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="clearfix"> </div>
           </div>
         </div>
 

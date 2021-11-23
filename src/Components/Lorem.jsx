@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Lorem() {
   return (
     <>
-      <div className="row brands-agile d-flex flex-wrap">
+      <div className="row brands-agile d-flex flex-wrap p-2">
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>

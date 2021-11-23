@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/megaMenu.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, NavLink, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
 function MegaMenu() {
   const dropDownStyle = { fontWeight: '500 !important', color: '#999 !important', fontSize: '14px' };

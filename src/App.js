@@ -1,7 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 import Header from './Components/Header';
 import MegaMenu from './Components/MegaMenu';
 import Footer from './Components/Footer';
@@ -17,6 +14,8 @@ import PersonalCare from './views/PersonalCare';
 import Gourment from './views/Gourment';
 import PackagedFood from './views/PackagedFood';
 import Beverage from './views/Beverage';
+import Offer from './views/Offer';
+
 import ScrollButton from './Components/ScrollButton';
 
 function App() {
@@ -37,7 +36,8 @@ function App() {
           <Route path="/personalcare" element={<PersonalCare />} />
           <Route path="/gourmet" element={<Gourment />} />
           <Route path="/packagedfood" element={<PackagedFood />} />
-          <Route path="/Beverage" element={<Beverage />} />
+          <Route path="/beverage" element={<Beverage />} />
+          <Route path="/offer" element={<Offer />} />
         </Routes>
         <Footer />
       </Router>

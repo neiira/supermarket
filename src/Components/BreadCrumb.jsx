@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import '../styles/breadCrumb.css';
 import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,12 +12,12 @@ function BreadCrumb({ prevPage, currentPage }) {
       <div className="container">
         <ol className="breadcrumb breadcrumb1">
           <li className=" breadcrumb-item">
-            <a href="index.html">
+            <Link to="/">
               <span aria-hidden="true">
                 <FontAwesomeIcon icon={faHome} />
               </span>
               {prevPage}
-            </a>
+            </Link>
           </li>
           <li className=" breadcrumb-item active ">{currentPage}</li>
         </ol>

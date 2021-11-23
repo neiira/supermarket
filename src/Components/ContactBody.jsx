@@ -12,77 +12,81 @@ function ContactBody() {
       <div className="about">
         <div className="w3_agileits_contact_grids">
           <div className="row">
-            <div className=" col col-md-6 w3_agileits_contact_grid_left">
-              <div className="agile_map">
-                <iframe title="hello" src={location} style={{ border: '0' }}></iframe>
-              </div>
-              <div className="agileits_w3layouts_map_pos">
-                <div className="agileits_w3layouts_map_pos1">
-                  <h3>Contact Info</h3>
-                  <p>1234k Avenue, 4th block, New York City.</p>
-                  <ul className="wthree_contact_info_address">
-                    <li>
-                      <FontAwesomeIcon icon={faEnvelope} className="contact-card" />
-                      <a href="mailto:info@example.com">info@example.com</a>
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faPhone} rotation={90} className="contact-card" />
-                      +(0123) 232 232
-                    </li>
-                  </ul>
-                  <div className="w3_agile_social_icons w3_agile_social_icons_contact">
-                    <ul>
+            <div className="col-md-12">
+              <div className="w3_agileits_contact_grid_left">
+                <div className="agile_map">
+                  <iframe title="hello" src={location} style={{ border: '0' }}></iframe>
+                </div>
+                <div className="agileits_w3layouts_map_pos">
+                  <div className="agileits_w3layouts_map_pos1">
+                    <h3>Contact Info</h3>
+                    <p>1234k Avenue, 4th block, New York City.</p>
+                    <ul className="wthree_contact_info_address">
                       <li>
-                        <a href="#" className="icon icon-cube agile_facebook"></a>
+                        <FontAwesomeIcon icon={faEnvelope} className="contact-card" />
+                        <a href="mailto:info@example.com">info@example.com</a>
                       </li>
                       <li>
-                        <a href="#" className="icon icon-cube agile_rss"></a>
-                      </li>
-                      <li>
-                        <a href="#" className="icon icon-cube agile_t"></a>
+                        <FontAwesomeIcon icon={faPhone} rotation={90} className="contact-card" />
+                        +(0123) 232 232
                       </li>
                     </ul>
+                    <div className="w3_agile_social_icons w3_agile_social_icons_contact">
+                      <ul>
+                        <li>
+                          <a href="#" className="icon icon-cube agile_facebook"></a>
+                        </li>
+                        <li>
+                          <a href="#" className="icon icon-cube agile_rss"></a>
+                        </li>
+                        <li>
+                          <a href="#" className="icon icon-cube agile_t"></a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className=" col col-md-6 w3_agileits_contact_grid_right" style={{ padding: '0 4em 0 12em' }}>
-              <h2 className="w3_agile_header">
-                Leave a<span> Message</span>
-              </h2>
+            <div className="col-md-12">
+              <div className="w3_agileits_contact_grid_right">
+                <h2 className="w3_agile_header">
+                  Leave a<span> Message</span>
+                </h2>
 
-              <form action="#" method="post">
-                <span className="input input--ichiro">
-                  <input
-                    className="input__field input__field--ichiro"
-                    type="text"
-                    id="input-25"
-                    name="Name"
-                    placeholder=" "
-                    required=""
-                  />
-                  <label className="input__label input__label--ichiro" htmlFor="input-25">
-                    <span className="input__label-content input__label-content--ichiro">Your Name</span>
-                  </label>
-                </span>
-                <span className="input input--ichiro">
-                  <input
-                    className="input__field input__field--ichiro"
-                    type="email"
-                    id="input-26"
-                    name="Email"
-                    placeholder=" "
-                    required=""
-                  />
-                  <label className="input__label input__label--ichiro" htmlFor="input-26">
-                    <span className="input__label-content input__label-content--ichiro">Your Email</span>
-                  </label>
-                </span>
-                <textarea name="Message" placeholder="Your message here..." required=""></textarea>
-                <input type="submit" value="Submit" />
-              </form>
+                <form action="#" method="post">
+                  <span className="input input--ichiro">
+                    <input
+                      className="input__field input__field--ichiro"
+                      type="text"
+                      id="input-25"
+                      name="Name"
+                      placeholder=" "
+                      required=""
+                    />
+                    <label className="input__label input__label--ichiro" htmlFor="input-25">
+                      <span className="input__label-content input__label-content--ichiro">Your Name</span>
+                    </label>
+                  </span>
+                  <span className="input input--ichiro">
+                    <input
+                      className="input__field input__field--ichiro"
+                      type="email"
+                      id="input-26"
+                      name="Email"
+                      placeholder=" "
+                      required=""
+                    />
+                    <label className="input__label input__label--ichiro" htmlFor="input-26">
+                      <span className="input__label-content input__label-content--ichiro">Your Email</span>
+                    </label>
+                  </span>
+                  <textarea name="Message" placeholder="Your message here..." required=""></textarea>
+                  <input type="submit" value="Submit" />
+                </form>
+              </div>
+              <div className="clearfix"> </div>
             </div>
-            <div className="clearfix"> </div>
           </div>
         </div>
       </div>

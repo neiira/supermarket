@@ -8,10 +8,10 @@ function GroceriesBody() {
       <div className="products">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-lg-4 col-md-12">
               <Sidebar />
             </div>
-            <div className="col-md-8">
+            <div className="col-lg-8 col-md-12">
               <ProductDisplay />
             </div>
           </div>

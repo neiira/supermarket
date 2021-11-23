@@ -16,7 +16,7 @@ function Productcard({ data }) {
           <div className="agile_top_brand_left_grid">
             {hasOffer && (
               <div className="agile_top_brand_left_grid_pos">
-                <img src={offer} alt=" " className="img-responsive" />
+                <img src={offer} alt=" " className="img-responsive" style={{ verticalAlign: 'top' }} />
               </div>
             )}
             <div className="agile_top_brand_left_grid1">
@@ -65,8 +65,8 @@ function Productcard({ data }) {
                       }
                     </div>
                     <h4>
-                      {originalPrice}
-                      <span>{discountedPrice}</span>
+                      {`$${originalPrice}`}
+                      <span>{`$${discountedPrice}`}</span>
                     </h4>
                   </div>
                   <div className="snipcart-details top_brand_home_details">
