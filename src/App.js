@@ -15,6 +15,8 @@ import Gourment from './views/Gourment';
 import PackagedFood from './views/PackagedFood';
 import Beverage from './views/Beverage';
 import Offer from './views/Offer';
+import Products from './views/Products';
+import Cart from './views/Cart';
 
 import ScrollButton from './Components/ScrollButton';
 
@@ -31,13 +33,15 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/faqs" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/groceries" element={<Groceries />} />
-          <Route path="/household" element={<HouseHold />} />
-          <Route path="/personalcare" element={<PersonalCare />} />
-          <Route path="/gourmet" element={<Gourment />} />
-          <Route path="/packagedfood" element={<PackagedFood />} />
-          <Route path="/beverage" element={<Beverage />} />
+          <Route path="/pizza" element={<Groceries />} />
+          <Route path="/momo" element={<HouseHold />} />
+          <Route path="/noodles" element={<PersonalCare />} />
+          <Route path="/sandwich" element={<Gourment />} />
+          <Route path="/chillies" element={<PackagedFood />} />
+          <Route path="/rice" element={<Beverage />} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </Router>

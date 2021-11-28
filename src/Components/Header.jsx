@@ -30,13 +30,15 @@ function Header() {
             </ul>
           </div>
           <div className="product_list_header">
-            <form action="#" method="post" className="last">
+            {/* <form action="#" method="post" className="last">
               <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="display" value="1" />
+              <input type="hidden" name="display" value="1" /> */}
+            <Link to="/cart">
               <button className="w3view-cart" type="submit" name="submit" value="">
                 <FontAwesomeIcon icon={faCartArrowDown} className="cart" size="lg" />
               </button>
-            </form>
+            </Link>
+            {/* </form> */}
           </div>
           <div className="clearfix"> </div>
         </div>

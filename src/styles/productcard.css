@@ -1,4 +1,4 @@
-.column div.agile_top_brand_left_grid {
+/* .column div.agile_top_brand_left_grid {
   position: relative;
   margin: 0;
 }
@@ -80,6 +80,7 @@
   z-index: 0;
 }
 /* Shine */
+/* 
 .hover14 figure {
   position: relative;
 }
@@ -118,4 +119,29 @@
 .stars {
   text-align: center;
   margin-bottom: 13px;
+} */
+
+.add-to-cart-button {
+  height: 30px;
+  font-size: 14px;
+  color: #fff;
+  background: #3399cc;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0.5 em 0;
+  padding-top: 0.5 em;
+  padding-right: 0 px;
+  padding-bottom: 0.5 em;
+  padding-left: 0 px;
+  outline: none;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+}
+.add-to-cart-button:hover {
+  background: #fe9126;
 }

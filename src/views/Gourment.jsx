@@ -5,7 +5,7 @@ import GroceriesBody from '../Components/GroceriesBody';
 function Gourment() {
   return (
     <>
-      <BreadCrumb prevPage="Home" currentPage="Gourment" />
+      <BreadCrumb prevPage="Home" currentPage="Sandwich" />
       <GroceriesBody />
     </>
   );

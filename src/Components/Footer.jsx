@@ -59,7 +59,7 @@ function Footer() {
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <a href="products.html">Special Products</a>
+                    <Link to="/products">All Products</Link>
                   </li>
                 </ul>
               </div>
@@ -69,27 +69,32 @@ function Footer() {
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/groceries">Groceries</Link>
+                    <Link to="/groceries">Pizza</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/household">House hold</Link>
+                    <Link to="/household">Momo</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/personalcare">Personal Care</Link>
+                    <Link to="/personalcare">Noodles</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/packagedfood">Packaged Food</Link>
+                    <Link to="/packagedfood">Chiilies</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <a href="beverages.html">Beverages</a>
+                    <Link to="/beverage">Rice</Link>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+
+                    <Link to="/gourmet">Sandwich</Link>
                   </li>
                 </ul>
               </div>
@@ -99,7 +104,7 @@ function Footer() {
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/store">Store</Link>
+                    <Link to="/products">Store</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />

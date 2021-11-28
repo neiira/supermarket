@@ -12,7 +12,7 @@ function ContactBody() {
       <div className="about">
         <div className="w3_agileits_contact_grids">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-lg-6 col-md-12">
               <div className="w3_agileits_contact_grid_left">
                 <div className="agile_map">
                   <iframe title="hello" src={location} style={{ border: '0' }}></iframe>
@@ -48,7 +48,7 @@ function ContactBody() {
                 </div>
               </div>
             </div>
-            <div className="col-md-12">
+            <div className="col-lg-6 col-md-12">
               <div className="w3_agileits_contact_grid_right">
                 <h2 className="w3_agile_header">
                   Leave a<span> Message</span>

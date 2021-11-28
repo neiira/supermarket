@@ -2,96 +2,12 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Supermarket.css';
 import Productcard from '../Components/Productcard';
-
-import ToorDaal from '../images/14.png';
-import NavaratanDal from '../images/15.png';
-import WhitePeasmatar from '../images/16.png';
-import ChannaDal from '../images/17.png';
+import { useSelector } from 'react-redux';
 
 function ProductDisplay() {
-  const data = [
-    {
-      id: 1,
-      productName: 'Milk Caramel',
-      originalPrice: 55,
-      discountedPrice: 35.99,
-      productImage: ToorDaal,
-      ratings: 3,
-      hasOffer: true
-    },
-    {
-      id: 2,
-      productName: 'Apple',
-      originalPrice: 120,
-      discountedPrice: 110,
-      productImage: ToorDaal,
-      ratings: 5,
-      hasOffer: false
-    },
-    {
-      id: 3,
-      productName: 'Navarat-Daal',
-      originalPrice: 30.99,
-      discountedPrice: 45.99,
-      productImage: NavaratanDal,
-      ratings: 5,
-      hasOffer: true
-    },
-    {
-      id: 4,
-      productName: 'White-Peasmatar',
-      originalPrice: 80.99,
-      discountedPrice: 105.99,
-      productImage: WhitePeasmatar,
-      ratings: 3,
-      hasOffer: true
-    },
-    {
-      id: 5,
-      productName: 'Channa-Dal',
-      originalPrice: 35.99,
-      discountedPrice: 55.99,
-      productImage: ChannaDal,
-      ratings: 5,
-      hasOffer: true
-    },
-    {
-      id: 1,
-      productName: 'Milk Caramel',
-      originalPrice: 55,
-      discountedPrice: 35.99,
-      productImage: ToorDaal,
-      ratings: 3,
-      hasOffer: true
-    },
-    {
-      id: 2,
-      productName: 'Apple',
-      originalPrice: 120,
-      discountedPrice: 110,
-      productImage: ToorDaal,
-      ratings: 5,
-      hasOffer: false
-    },
-    {
-      id: 3,
-      productName: 'Navarat-Daal',
-      originalPrice: 30.99,
-      discountedPrice: 45.99,
-      productImage: NavaratanDal,
-      ratings: 5,
-      hasOffer: true
-    },
-    {
-      id: 4,
-      productName: 'White-Peasmatar',
-      originalPrice: 80.99,
-      discountedPrice: 105.99,
-      productImage: WhitePeasmatar,
-      ratings: 3,
-      hasOffer: true
-    }
-  ];
+  const productList = useSelector(state => state.listProduct);
+  const { loading, products } = productList;
+  // console.log(productList);
 
   return (
     <>
@@ -120,11 +36,12 @@ function ProductDisplay() {
 
         <div className="agile_top_brands_grids">
           <div className="row">
-            {data.map(d => (
-              <div className="col-md-4 col-sm-6 p-3">
-                <Productcard data={d} key={d.id} />
-              </div>
-            ))}
+            {!loading &&
+              products.map(d => (
+                <div className="col-md-4 col-sm-6 p-3">
+                  <Productcard products={d} key={d.id} />
+                </div>
+              ))}
           </div>
         </div>
       </div>

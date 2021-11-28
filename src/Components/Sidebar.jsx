@@ -5,6 +5,7 @@ import '../icon/icon.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
@@ -14,158 +15,92 @@ function Sidebar() {
           <h2>Categories</h2>
           <ul className="cate">
             <li>
-              <a href="products.html">
+              <Link to="/momo">
                 <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                Fruits And Vegetables
-              </a>
+                MOMO
+              </Link>
             </li>
             <ul>
               <li>
+                <Link to="/products">
+                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
+                  Chicken (Kothe) Momo
+                </Link>
+              </li>
+              <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Cuts & Sprouts
+                  Chicken (Steam) Momo
                 </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Flowers
+                  Chicken (Chilli) Momo
                 </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Fresh Herbs & Seasonings
+                  Veg (Chilli) Momo
                 </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Fresh Vegetables
-                </a>{' '}
+                  Veg (Kothe) Momo
+                </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  International Vegetables
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Organic Fruits & Vegetables
+                  Veg (Steam) Momo
                 </a>
               </li>
             </ul>
             <li>
               <a href="products.html">
                 <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                Grocery & Staples
+                NOODLES
               </a>
             </li>
             <ul>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Dals & Pulses
-                </a>{' '}
+                  Veg Noodles
+                </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Dry Fruits
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Edible Oils & Ghee
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Flours & Sooji
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Masalas & Spices
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Organic Staples
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Rice & Rice Products
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Salt, Sugar & Jaggery
+                  Chicken Noodles
                 </a>
               </li>
             </ul>
             <li>
               <a href="products.html">
                 <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                PersonalCare
+                CHILLI
               </a>
             </li>
             <ul>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Baby Care
-                </a>{' '}
+                  Chicken Chilli
+                </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Cosmetics
-                </a>{' '}
+                  Mushroom Chilli
+                </a>
               </li>
               <li>
                 <a href="products.html">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Deos & Perfumes
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Skin Care
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Sanitary Needs
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Oral Care
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Personal Hygiene
-                </a>{' '}
-              </li>
-              <li>
-                <a href="products.html">
-                  <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
-                  Shaving Needs
+                  Paneer Chilli
                 </a>
               </li>
             </ul>

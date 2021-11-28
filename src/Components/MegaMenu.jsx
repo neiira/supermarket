@@ -18,7 +18,41 @@ function MegaMenu() {
               <Link to="/" className=" text-white text-decoration-none px-3 nav-link">
                 Home
               </Link>
-              <NavDropdown title="Groceries" className="text-white px-2">
+              <Link to="/pizza" className=" text-white text-decoration-none px-3 nav-link">
+                PIZZA
+              </Link>
+              <Link to="/momo" className=" text-white text-decoration-none px-3 nav-link">
+                MOMO
+              </Link>
+              <Link to="/noodles" className=" text-white text-decoration-none px-3 nav-link">
+                NOODLES
+              </Link>
+              <Link to="/chillies" className=" text-white text-decoration-none px-3 nav-link">
+                CHILLI
+              </Link>
+              <Link to="/rice" className=" text-white text-decoration-none px-3 nav-link">
+                RICE
+              </Link>
+              <Link to="/sandwich" className="text-white text-decoration-none px-3 nav-link">
+                SANDWICH
+              </Link>
+              <Link to="/offer" className="text-white text-decoration-none px-3 nav-link">
+                Offer
+              </Link>
+              <Link to="/contact" className="text-white text-decoration-none nav-link">
+                Contact
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
+  );
+}
+
+export default MegaMenu;
+
+/* <NavDropdown title="Groceries" className="text-white px-2">
                 <NavDropdown.Item style={dropTitle}>All Groceries</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item style={dropDownStyle}>
@@ -147,22 +181,4 @@ function MegaMenu() {
                     Tea
                   </Link>
                 </NavDropdown.Item>
-              </NavDropdown>
-              <Link to="/gourmet" className="text-white text-decoration-none px-3 nav-link">
-                Gourment
-              </Link>
-              <Link to="/offer" className="text-white text-decoration-none px-3 nav-link">
-                Offer
-              </Link>
-              <Link to="/contact" className="text-white text-decoration-none nav-link">
-                Contact
-              </Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
-  );
-}
-
-export default MegaMenu;
+              </NavDropdown> */

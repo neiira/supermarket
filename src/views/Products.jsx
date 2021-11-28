@@ -1,19 +1,17 @@
-import React from 'react';
-import Header from '../Components/Header';
-import MegaMenu from '../Components/MegaMenu';
-
-import Footer from '../Components/Footer';
+import React, { useEffect } from 'react';
 import BreadCrumb from '../Components/BreadCrumb';
 import GroceriesBody from '../Components/GroceriesBody';
-
+import { useDispatch } from 'react-redux';
+import { listProducts } from '../actions/productActions';
 function Products() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch]);
   return (
     <>
-      <Header />
-      <MegaMenu />
-      <BreadCrumb prevPage="Home" currentPage="Groceries" />
+      <BreadCrumb prevPage="Home" currentPage="All products" />
       <GroceriesBody />
-      <Footer />
     </>
   );
 }
