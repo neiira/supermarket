@@ -1,8 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Sidebar from '../Components/Sidebar';
 import ProductDisplay from '../Components/ProductDisplay';
 
-function GroceriesBody() {
+function GroceriesBody({ products }) {
   return (
     <>
       <div className="products">
@@ -12,7 +13,7 @@ function GroceriesBody() {
               <Sidebar />
             </div>
             <div className="col-lg-8 col-md-12">
-              <ProductDisplay />
+              <ProductDisplay products={products} />
             </div>
           </div>
         </div>

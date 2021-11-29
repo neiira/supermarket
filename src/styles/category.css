@@ -1,6 +1,11 @@
 .category-item {
-  border: 2px solid skyblue;
   border-radius: 7px;
+  border: 1px solid white;
+  transition: transform 0.7s ease;
+}
+.category-item:hover {
+  border: 1px solid skyblue;
+  transition: 1s;
 }
 
 .category-link:hover {

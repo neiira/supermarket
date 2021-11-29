@@ -3,10 +3,11 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { homePageDataReducer } from './reducers/homeReducers';
 import { productListReducer } from './reducers/productReducer';
-
+import { productByIdReducer } from './reducers/productReducer';
 const reducers = combineReducers({
   homePage: homePageDataReducer,
-  listProduct: productListReducer
+  listProduct: productListReducer,
+  product: productByIdReducer
 });
 
 const middleware = [thunk];

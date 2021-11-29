@@ -4,9 +4,10 @@ import '../Supermarket.css';
 import Productcard from '../Components/Productcard';
 import { useSelector } from 'react-redux';
 
-function ProductDisplay() {
-  const productList = useSelector(state => state.listProduct);
-  const { loading, products } = productList;
+function ProductDisplay({ products }) {
+  // console.log(products);
+  // const productList = useSelector(state => state.listProduct);
+  // const { loading, products } = productList;
   // console.log(productList);
 
   return (
@@ -36,7 +37,7 @@ function ProductDisplay() {
 
         <div className="agile_top_brands_grids">
           <div className="row">
-            {!loading &&
+            {products &&
               products.map(d => (
                 <div className="col-md-4 col-sm-6 p-3">
                   <Productcard products={d} key={d.id} />

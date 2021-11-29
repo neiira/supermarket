@@ -22,7 +22,7 @@ function FadeCarousel() {
               <img className="d-block w-100 opacity-1" src={value.images} height="500" alt="Third slide" />
               <Carousel.Caption>
                 {/* <Button>Shop Now</Button> */}
-                <h1 style={{ paddingBottom: '150px' }} className="text-dark">
+                <h1 style={{ paddingBottom: '150px' }} className="text-dark text-right">
                   {value.category_search}
                 </h1>
               </Carousel.Caption>

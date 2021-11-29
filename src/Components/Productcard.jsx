@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Supermarket.css';
 import '../styles/productcard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,9 +9,10 @@ import '../icon/icon.css';
 import offer from '../images/offer.png';
 
 function Productcard({ products }) {
-  const { title, unitPrice, ratings, hasOffer, images } = products;
+  const { title, unitPrice, ratings, hasOffer, images, slug, id } = products;
   const [{ markedPrice, sellingPrice }] = unitPrice;
   const [{ imageName }] = images;
+  console.log(products);
 
   return (
     <>
@@ -69,11 +71,15 @@ function Productcard({ products }) {
                     </div>
                     <h4>
                       {`$${markedPrice}`}
-                      <span>{`$${sellingPrice}`}</span>
+                      {/* <span>{`$${sellingPrice}`}</span> */}
                     </h4>
                   </div>
                   <div className="snipcart-details top_brand_home_details">
-                    <button className="add-to-cart-button">Add to cart</button>
+                    <button className="add-to-cart-button">
+                      <Link type="button" to={`/product/${slug}/${id}`} className="product-link">
+                        Add to cart
+                      </Link>
+                    </button>
                   </div>
                 </div>
               </figure>

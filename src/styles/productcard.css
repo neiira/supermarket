@@ -145,3 +145,13 @@
 .add-to-cart-button:hover {
   background: #fe9126;
 }
+
+.product-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+
+.product-link:hover {
+  color: #fff;
+}

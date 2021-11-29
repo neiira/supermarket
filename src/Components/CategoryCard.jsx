@@ -10,9 +10,9 @@ function CategoryCard({ categories }) {
     <>
       <div className="category-item">
         <div className="row align-items-center">
-          <a href="#home" className="category-link-one">
+          <Link to={`/${title}`} className="category-link-one">
             <img src={icon} alt="category" className="img-fluid category-img" width="445" />
-          </a>
+          </Link>
 
           <div className="description">
             <h4 className="category-title">{title}</h4>
