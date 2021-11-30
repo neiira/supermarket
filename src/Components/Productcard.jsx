@@ -12,7 +12,7 @@ function Productcard({ products }) {
   const { title, unitPrice, ratings, hasOffer, images, slug, id } = products;
   const [{ markedPrice, sellingPrice }] = unitPrice;
   const [{ imageName }] = images;
-  console.log(products);
+  // console.log(products);
 
   return (
     <>

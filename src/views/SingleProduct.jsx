@@ -6,7 +6,8 @@ import { productById } from '../actions/productActions';
 
 function SingleProduct() {
   const { id } = useParams();
-  console.log(id, 'product id');
+  // console.log(id, 'product id');
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(productById(id));

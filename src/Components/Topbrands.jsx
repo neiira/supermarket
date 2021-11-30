@@ -9,6 +9,7 @@ import SectionHeader from '../Components/SectionHeader';
 function Topbrands() {
   const newHomeData = useSelector(state => state.homePage);
   const { products, loading } = newHomeData;
+  console.log(newHomeData);
   if (!loading) {
     // newHomeData.map(data => console.log(data));
     // console.log(products);
@@ -30,7 +31,7 @@ function Topbrands() {
             <div className="toggle-button">
               <ul className="nav nav-tabs" id="pills-tab" role="tablist">
                 <li className="active" role="presentation">
-                  {!loading && (
+                  {!loading && products && products[2] && (
                     <a
                       href="abs"
                       className="active"
@@ -42,12 +43,12 @@ function Topbrands() {
                       aria-controls="pills-offer1"
                       aria-selected="true"
                     >
-                      {newHomeData.products[7].sectionDetails.title}
+                      {products[2].sectionDetails.title}
                     </a>
                   )}
                 </li>
                 <li role="presentation">
-                  {!loading && (
+                  {!loading && products && products[6] && (
                     <a
                       href="las"
                       className=""
@@ -59,7 +60,7 @@ function Topbrands() {
                       aria-controls="pills-offer2"
                       aria-selected="false"
                     >
-                      {newHomeData.products[2].sectionDetails.title}
+                      {products[6].sectionDetails.title}
                     </a>
                   )}
                 </li>
@@ -100,9 +101,9 @@ function Topbrands() {
                   <div className=" row weak-offer-content d-flex justify-content-between flex-wrap">
                     {!loading &&
                       products &&
-                      products[7] &&
-                      products[7].sectionDetails &&
-                      products[7].sectionDetails.products.map(d => (
+                      products[6] &&
+                      products[6].sectionDetails &&
+                      products[6].sectionDetails.products.map(d => (
                         <div className="col-md-4 col-sm-12 p-3">
                           <Productcard products={d} key={d.id} />
                         </div>

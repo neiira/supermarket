@@ -6,13 +6,13 @@ function Category() {
   const newHomeData = useSelector(state => state.homePage);
   const { products, loading } = newHomeData;
   // console.log(products);
-  if (!loading) {
-    newHomeData &&
-      products &&
-      products[1] &&
-      products[1].categories &&
-      products[1].categories.map(category => console.log(category));
-  }
+  // if (!loading) {
+  //   newHomeData &&
+  //     products &&
+  //     products[1] &&
+  //     products[1].categories &&
+  //     products[1].categories.map(category => console.log(category));
+  // }
   return (
     <>
       <div className="category-section">
