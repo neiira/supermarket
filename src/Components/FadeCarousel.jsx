@@ -5,7 +5,7 @@ import { Carousel, Button } from 'react-bootstrap';
 function FadeCarousel() {
   const newHomeData = useSelector(state => state.homePage);
   const { products, loading } = newHomeData;
-  // console.log(newHomeData);
+  console.log(newHomeData);
 
   // if (!loading) {
   //   const details = products[0].details;

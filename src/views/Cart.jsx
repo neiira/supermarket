@@ -1,24 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router';
 import { removeItemFromCart } from '../actions/cartActions';
+import { updateCartItem } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { ListGroup, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/cart.css';
 import BreadCrumb from '../Components/BreadCrumb';
 
 function Cart() {
-  const { id } = useParams();
-  const location = useLocation();
-  const quantity = location.search ? Number(location.search.split('=')[1]) : 1;
+  //   const { id } = useParams();
+  //   const location = useLocation();
+  // const quantity = location.search ? Number(location.search.split('=')[1]) : 1;
   const dispatch = useDispatch();
 
   const cartItem = useSelector(state => state.cartItem);
 
   const { cartItems } = cartItem;
   console.log(cartItems);
-  console.log(cartItems);
+
   const removeProductHandler = toBeDeletedId => {
     console.log('this remove button');
     dispatch(removeItemFromCart(toBeDeletedId));
@@ -44,37 +46,39 @@ function Cart() {
                       <Col>{cartItem.title}</Col>
 
                       <Col>
-                        <div
-                          className="d-flex quantity-btn align-items-center "
-                          style={{ border: '1px solid green', width: '100px', paddingLeft: '10px' }}
-                        >
+                        <div className="d-flex quantity-btn align-items-center ">
                           <button
                             className="add fw-bold"
-                            style={{
-                              border: 'none',
-                              width: '30px',
-                              backgroundColor: 'white'
+                            onClick={() => {
+                              console.log('qty subtracted');
+                              dispatch(updateCartItem(cartItem.cartId, cartItem.quantity - 1));
                             }}
                           >
                             -
                           </button>
+                          {/* <input type="text" className="quantity-input" value={cartItem.quantity} />? */}
                           <span className="fw-bold">{cartItem.quantity}</span>
                           <button
                             className="sub fw-bold"
-                            style={{
-                              border: 'none',
-                              width: '30px',
-                              backgroundColor: 'white'
+                            onClick={() => {
+                              console.log('qty added');
+                              dispatch(updateCartItem(cartItem.cartId, cartItem.quantity + 1));
                             }}
                           >
                             +
                           </button>
                         </div>
                       </Col>
-                      <Col>{cartItem.quantity}</Col>
-                      <Col>{`RS.${cartItem.unitPrice * cartItem.quantity}`}</Col>
+                      <Col>{`unit price:RS${cartItem.unitPrice}`}</Col>
+                      <Col>{`subtotal:RS.${cartItem.unitPrice * cartItem.quantity}`}</Col>
                       <Col>
-                        <FontAwesomeIcon icon={faTimes} onClick={() => removeProductHandler(cartItem.cartId)} />
+                        <div className="delete-btn-box align-items-center">
+                          <FontAwesomeIcon
+                            className="cart-item-delete-btn"
+                            icon={faTrash}
+                            onClick={() => removeProductHandler(cartItem.cartId)}
+                          />
+                        </div>
                       </Col>
                     </Row>
                   </ListGroup.Item>

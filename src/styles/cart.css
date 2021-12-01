@@ -1,0 +1,30 @@
+.quantity-btn {
+  border: 1px solid green;
+  width: 100px;
+  padding-left: 10px;
+}
+
+.add,
+.sub {
+  border: none;
+  width: 30px;
+  background-color: white;
+}
+
+.quantity-input {
+  width: 30px;
+  border: none;
+}
+.quantity-input:focus {
+  outline: none;
+}
+
+.cart-item-delete-btn {
+  color: orange;
+  font-size: 20px;
+}
+
+.cart-item-delete-btn:hover {
+  color: red;
+  cursor: pointer;
+}
