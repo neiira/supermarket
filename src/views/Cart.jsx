@@ -18,7 +18,7 @@ function Cart() {
 
   const { cartItems } = cartItem;
   console.log(cartItems);
-
+  console.log(cartItems);
   const removeProductHandler = toBeDeletedId => {
     console.log('this remove button');
     dispatch(removeItemFromCart(toBeDeletedId));
