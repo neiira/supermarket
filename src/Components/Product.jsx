@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
 import { useParams, useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-
+import { addItemToCart } from '../actions/cartActions';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/product.css';
 
@@ -13,15 +12,13 @@ function Products({ product }) {
   const { title, images, unitPrice, categoryTitle, tags } = product;
   const [{ imageName }] = images;
   const [{ markedPrice }] = unitPrice;
-
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(productById(id));
-  // // }, [dispatch, id]);
   const { id, slug } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const addItemToCartHandler = () => {
     navigate(`/cart/${slug}/${id}?quantity=${quantity}`);
+    dispatch(addItemToCart(id, quantity));
   };
   return (
     <>

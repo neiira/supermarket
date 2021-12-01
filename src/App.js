@@ -43,6 +43,7 @@ function App() {
           <Route path="/offer" element={<Offer />} />
           <Route path="/products" element={<Products />} />
           <Route path="/cart/:slug/:id" element={<Cart />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/product/:slug/:id" element={<SingleProduct />} />
         </Routes>
         <Footer />
