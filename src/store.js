@@ -5,12 +5,13 @@ import { homePageDataReducer } from './reducers/homeReducers';
 import { productListReducer } from './reducers/productReducer';
 import { productByIdReducer } from './reducers/productReducer';
 import { cartReducer } from './reducers/cartReducers';
-
+import { cartItemReducer } from './reducers/cartReducers';
 const reducers = combineReducers({
   homePage: homePageDataReducer,
   listProduct: productListReducer,
   product: productByIdReducer,
-  cartItem: cartReducer
+  cartItem: cartReducer,
+  AllCartItem: cartItemReducer
 });
 
 const middleware = [thunk];

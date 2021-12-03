@@ -18,7 +18,7 @@ function CategoryCard({ categories }) {
             <h4 className="category-title">{title}</h4>
             <span className="productCount">{`${productCount} products`}</span>
             <br />
-            <Link to={`/${title.toLowerCase()}`} className="category-link">
+            <Link to={`/${title.toLowerCase().replace(/\s/g, '')}`} className="category-link">
               Shop now
               <FontAwesomeIcon icon={faArrowCircleRight} color="orange" className="category-arrow" />
             </Link>

@@ -17,7 +17,9 @@ import Beverage from './views/Beverage';
 import Offer from './views/Offer';
 import Products from './views/Products';
 import Cart from './views/Cart';
+import PlaceOrder from './views/PlaceOrder';
 import SingleProduct from './views/SingleProduct';
+import HealthyChoice from './views/HealthyChoice';
 
 import ScrollButton from './Components/ScrollButton';
 
@@ -44,6 +46,9 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/cart/:slug/:id" element={<Cart />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/placeorder" element={<PlaceOrder />} />
+          <Route path="/healthychoice" element={<HealthyChoice />} />
+
           <Route path="/product/:slug/:id" element={<SingleProduct />} />
         </Routes>
         <Footer />

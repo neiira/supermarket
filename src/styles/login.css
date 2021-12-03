@@ -58,7 +58,8 @@
 
 .login-form-grids input[type='email'],
 .login-form-grids input[type='password'],
-.login-form-grids input[type='text'] {
+.login-form-grids input[type='text'],
+.login-form-grids input[type='tel'] {
   outline: none;
   border: 1px solid #dbdbdb;
   padding: 10px 10px 10px 10px;

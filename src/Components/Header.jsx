@@ -56,7 +56,7 @@ function Header() {
           </div>
           <div className="w3ls_logo_products_left">
             <h1>
-              <a href="index.html">super Market</a>
+              <a href="index.html">Boa Fresh food</a>
             </h1>
           </div>
           <div className="w3l_search">

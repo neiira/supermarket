@@ -36,6 +36,10 @@ function MegaMenu() {
               <Link to="/sandwich" className="text-white text-decoration-none px-3 nav-link">
                 SANDWICH
               </Link>
+              <Link to="/healthychoice" className="text-white text-decoration-none px-3 nav-link">
+                HEALTHY CHOICE
+              </Link>
+
               <Link to="/offer" className="text-white text-decoration-none px-3 nav-link">
                 Offer
               </Link>

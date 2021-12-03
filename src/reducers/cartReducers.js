@@ -1,4 +1,11 @@
-import { ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART, UPDATE_CART_ITEM } from '../constants/cartConstants';
+import {
+  ADD_ITEM_TO_CART,
+  REMOVE_ITEM_FROM_CART,
+  UPDATE_CART_ITEM,
+  GET_ALL_CART_ITEM_REQUEST,
+  GET_ALL_CART_ITEM_SUCCESS,
+  GET_ALL_CART_ITEM_FAIL
+} from '../constants/cartConstants';
 
 export const cartReducer = (state = { cartItems: [] }, { type, payload }) => {
   switch (type) {
@@ -37,6 +44,21 @@ export const cartReducer = (state = { cartItems: [] }, { type, payload }) => {
           cartItems: [...state.cartItems, cartItem]
         };
       }
+
+    default:
+      return state;
+  }
+};
+
+export const cartItemReducer = (state = { allCartItem: [], loading: true }, { type, payload }) => {
+  switch (type) {
+    case GET_ALL_CART_ITEM_REQUEST:
+      return { allCartItem: [], loading: true };
+
+    case GET_ALL_CART_ITEM_SUCCESS:
+      return { allCartItem: payload, loading: false };
+    case GET_ALL_CART_ITEM_FAIL:
+      return { error: payload, loading: false };
 
     default:
       return state;
