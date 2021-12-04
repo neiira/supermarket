@@ -7,6 +7,7 @@ function Offer() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(homePage());
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   return (

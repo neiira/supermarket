@@ -25,7 +25,7 @@ function Footer() {
                   <li>
                     <FontAwesomeIcon icon={faEnvelope} className="address" />
 
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <Link to="mailto:info@example.com">info@example.com</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faPhone} className="address" />
@@ -69,32 +69,32 @@ function Footer() {
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/groceries">Pizza</Link>
+                    <Link to="/pizza">Pizza</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/household">Momo</Link>
+                    <Link to="/momo">Momo</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/personalcare">Noodles</Link>
+                    <Link to="/noodles">Noodles</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/packagedfood">Chiilies</Link>
+                    <Link to="/chilli">Chiilies</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/beverage">Rice</Link>
+                    <Link to="/rice">Rice</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/gourmet">Sandwich</Link>
+                    <Link to="/sandwich">Sandwich</Link>
                   </li>
                 </ul>
               </div>
@@ -109,7 +109,7 @@ function Footer() {
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
 
-                    <Link to="/checkout">Check Out</Link>
+                    <Link to="/placeorder">Check Out</Link>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
@@ -131,7 +131,10 @@ function Footer() {
         <div className="footer-copy">
           <div className="container">
             <p>
-              © 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a>
+              © 2017 Super Market. All rights reserved | Design by{' '}
+              <a href="http://w3layouts.com/" target="_blank" rel="noreferrer">
+                W3layouts
+              </a>
             </p>
           </div>
         </div>
@@ -141,22 +144,22 @@ function Footer() {
           <div className="w3layouts-foot">
             <ul className="socialBrands">
               <li>
-                <a href="#" className="w3_agile_facebook">
+                <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer" className="w3_agile_facebook">
                   <FontAwesomeIcon icon={faFacebook} className="" />
                 </a>
               </li>
               <li>
-                <a href="#" className="agile_twitter">
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="agile_twitter">
                   <FontAwesomeIcon icon={faTwitter} className="" />
                 </a>
               </li>
               <li>
-                <a href="#" className="w3_agile_dribble">
+                <a href="https://dribbble.com" target="_blank" rel="noreferrer" className="w3_agile_dribble">
                   <FontAwesomeIcon icon={faDribbble} className="" />
                 </a>
               </li>
               <li>
-                <a href="#" className="w3_agile_vimeo">
+                <a href="https://vimeo.com/" target="_blank" rel="noreferrer" className="w3_agile_vimeo">
                   <FontAwesomeIcon icon={faVimeo} className="" />
                 </a>
               </li>

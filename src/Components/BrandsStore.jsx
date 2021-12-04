@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/brandsStore.css';
-// import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionHeader from '../Components/SectionHeader';
 import Lorem from '../Components/Lorem';

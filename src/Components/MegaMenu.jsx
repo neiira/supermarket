@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import '../styles/megaMenu.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function MegaMenu() {
-  //   const dropDownStyle = { fontWeight: '500 !important', color: '#999 !important', fontSize: '14px' };
-  // const dropTitle = { color: '#fe9126', paddingBottom: '1rem', fontSize: '20px' };
   return (
     <>
       <Navbar bg="mega-menu" expand="lg">
@@ -39,7 +37,6 @@ function MegaMenu() {
               <Link to="/healthychoice" className="text-white text-decoration-none px-3 nav-link">
                 HEALTHY CHOICE
               </Link>
-
               <Link to="/offer" className="text-white text-decoration-none px-3 nav-link">
                 Offer
               </Link>

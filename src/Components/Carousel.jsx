@@ -3,6 +3,7 @@ import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import carosuselImg1 from '../images/b1.jpg';
 import carosuselImg2 from '../images/b3.jpg';
+import { Link } from 'react-router-dom';
 
 function Carousel() {
   return (
@@ -32,9 +33,9 @@ function Carousel() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <a href="beverages.html">
+            <Link to="/rice">
               <img src={carosuselImg2} className="d-block w-100" alt="First slide" />
-            </a>
+            </Link>
           </div>
           <div className="carousel-item">
             <img src={carosuselImg2} className="d-block w-100" alt="Second slide" />

@@ -5,16 +5,13 @@ import '../styles/topBrands.css';
 import OfferHeader from '../Components/OfferHeader';
 import Productcard from '../Components/Productcard';
 import SectionHeader from '../Components/SectionHeader';
-
+import Loader from '../Components/Loader';
+import { Link } from 'react-router-dom';
 function Topbrands() {
   const newHomeData = useSelector(state => state.homePage);
   const { products, loading } = newHomeData;
   console.log(newHomeData);
   if (!loading) {
-    // newHomeData.map(data => console.log(data));
-    // console.log(products);
-    // const newproducts = products.map(products => products);
-    // console.log(newproducts[7].sectionDetails.products);
     newHomeData &&
       products &&
       products[7] &&
@@ -31,37 +28,47 @@ function Topbrands() {
             <div className="toggle-button">
               <ul className="nav nav-tabs" id="pills-tab" role="tablist">
                 <li className="active" role="presentation">
-                  {!loading && products && products[2] && (
-                    <a
-                      href="abs"
-                      className="active"
-                      id="pills-home-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#pills-offer1"
-                      type="button"
-                      role="tab"
-                      aria-controls="pills-offer1"
-                      aria-selected="true"
-                    >
-                      {products[2].sectionDetails.title}
-                    </a>
+                  {loading ? (
+                    <Loader />
+                  ) : (
+                    products &&
+                    products[2] && (
+                      <Link
+                        to="/products"
+                        className="active"
+                        id="pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-offer1"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-offer1"
+                        aria-selected="true"
+                      >
+                        {products[2].sectionDetails.title}
+                      </Link>
+                    )
                   )}
                 </li>
                 <li role="presentation">
-                  {!loading && products && products[6] && (
-                    <a
-                      href="las"
-                      className=""
-                      id="pills-profile-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#pills-offer2"
-                      type="button"
-                      role="tab"
-                      aria-controls="pills-offer2"
-                      aria-selected="false"
-                    >
-                      {products[6].sectionDetails.title}
-                    </a>
+                  {loading ? (
+                    <Loader />
+                  ) : (
+                    products &&
+                    products[6] && (
+                      <Link
+                        to="/products"
+                        className=""
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-offer2"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-offer2"
+                        aria-selected="false"
+                      >
+                        {products[6].sectionDetails.title}
+                      </Link>
+                    )
                   )}
                 </li>
               </ul>
@@ -80,15 +87,18 @@ function Topbrands() {
                     offerDescription="We've pulled together all our advertised offers into one place, so you won't miss out on a great deal."
                   />
                   <div className=" row advertised-content d-flex justify-content-between flex-wrap ">
-                    {!loading &&
+                    {loading ? (
+                      <Loader />
+                    ) : (
                       products &&
                       products[2] &&
                       products[2].sectionDetails &&
                       products[2].sectionDetails.products.map(d => (
-                        <div className="col-md-4 col-sm-12 p-3">
-                          <Productcard products={d} key={d.id} />
+                        <div className="col-md-4 col-sm-12 p-3" key={d.id}>
+                          <Productcard products={d} />
                         </div>
-                      ))}
+                      ))
+                    )}
                   </div>
                 </div>
               </div>
@@ -99,15 +109,18 @@ function Topbrands() {
                     offerDescription="We've pulled together all our advertised offers into one place, so you won't miss out on a great deal."
                   />
                   <div className=" row weak-offer-content d-flex justify-content-between flex-wrap">
-                    {!loading &&
+                    {loading ? (
+                      <Loader />
+                    ) : (
                       products &&
                       products[6] &&
                       products[6].sectionDetails &&
                       products[6].sectionDetails.products.map(d => (
-                        <div className="col-md-4 col-sm-12 p-3">
-                          <Productcard products={d} key={d.id} />
+                        <div className="col-md-4 col-sm-12 p-3" key={d.id}>
+                          <Productcard products={d} />
                         </div>
-                      ))}
+                      ))
+                    )}
                   </div>
                 </div>
               </div>

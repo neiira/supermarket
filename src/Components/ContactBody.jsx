@@ -34,13 +34,34 @@ function ContactBody() {
                     <div className="w3_agile_social_icons w3_agile_social_icons_contact">
                       <ul>
                         <li>
-                          <a href="#" className="icon icon-cube agile_facebook"></a>
+                          <a
+                            href="https://www.w3schools.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="icon icon-cube agile_facebook"
+                          >
+                            {''}
+                          </a>
                         </li>
                         <li>
-                          <a href="#" className="icon icon-cube agile_rss"></a>
+                          <a
+                            href="https://www.w3schools.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="icon icon-cube agile_rss"
+                          >
+                            {''}
+                          </a>
                         </li>
                         <li>
-                          <a href="#" className="icon icon-cube agile_t"></a>
+                          <a
+                            href="https://www.w3schools.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="icon icon-cube agile_t"
+                          >
+                            {''}
+                          </a>
                         </li>
                       </ul>
                     </div>

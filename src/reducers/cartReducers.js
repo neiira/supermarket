@@ -4,7 +4,10 @@ import {
   UPDATE_CART_ITEM,
   GET_ALL_CART_ITEM_REQUEST,
   GET_ALL_CART_ITEM_SUCCESS,
-  GET_ALL_CART_ITEM_FAIL
+  GET_ALL_CART_ITEM_FAIL,
+  CHECK_OUT_REQUEST,
+  CHECK_OUT_SUCCESS,
+  CHECK_OUT_FAIL
 } from '../constants/cartConstants';
 
 export const cartReducer = (state = { cartItems: [] }, { type, payload }) => {
@@ -58,6 +61,21 @@ export const cartItemReducer = (state = { allCartItem: [], loading: true }, { ty
     case GET_ALL_CART_ITEM_SUCCESS:
       return { allCartItem: payload, loading: false };
     case GET_ALL_CART_ITEM_FAIL:
+      return { error: payload, loading: false };
+
+    default:
+      return state;
+  }
+};
+
+export const checkOutReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case CHECK_OUT_REQUEST:
+      return { loading: true };
+
+    case CHECK_OUT_SUCCESS:
+      return { checkOutData: payload, loading: false };
+    case CHECK_OUT_FAIL:
       return { error: payload, loading: false };
 
     default:

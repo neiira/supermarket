@@ -10,42 +10,54 @@ function Lorem() {
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>
-              <a href="#">Lorem</a>
+              <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">
+                Lorem
+              </a>
             </p>
           </div>
         </div>
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>
-              <a href="#">Lorem</a>
+              <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">
+                Lorem
+              </a>
             </p>
           </div>
         </div>
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>
-              <a href="#">Lorem</a>
+              <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">
+                Lorem
+              </a>
             </p>
           </div>
         </div>
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>
-              <a href="#">Lorem</a>
+              <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">
+                Lorem
+              </a>
             </p>
           </div>
         </div>
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>
-              <a href="#">Lorem</a>
+              <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">
+                Lorem
+              </a>
             </p>
           </div>
         </div>
         <div className="col-md-2 w3layouts-brand">
           <div className="brands-w3l">
             <p>
-              <a href="#">Lorem</a>
+              <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">
+                Lorem
+              </a>
             </p>
           </div>
         </div>

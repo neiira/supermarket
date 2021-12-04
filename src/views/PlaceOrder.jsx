@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import { removeItemFromCart } from '../actions/cartActions';
-import { updateCartItem } from '../actions/cartActions';
-
 import { AllCartItem } from '../actions/cartActions';
+import { checkOutCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { ListGroup, Row, Col, Image, Form, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/cart.css';
 import BreadCrumb from '../Components/BreadCrumb';
@@ -20,30 +16,23 @@ function CartView() {
     dispatch(AllCartItem());
   }, [dispatch]);
 
-  // const cartItem = useSelector(state => state.cartItem);
-
-  // const { cartItems } = cartItem;
-  // console.log(cartItems);
-
   const getAllCartItem = useSelector(state => state.AllCartItem);
   console.log(getAllCartItem);
   const { allCartItem, loading } = getAllCartItem;
 
-  if (!loading) {
-    // console.log(allCartItem);
-  }
-
-  const removeProductHandler = toBeDeletedId => {
-    console.log('this remove button');
-    dispatch(removeItemFromCart(toBeDeletedId));
-  };
-
+  const checkOut = useSelector(state => state.checkOut);
+  const { error } = checkOut;
+  console.log(checkOut);
   const gotoProductsHandler = () => {
     navigate('/products');
   };
 
   const gotoCartHandler = () => {
     navigate('/cart');
+  };
+
+  const checkOutHandler = () => {
+    dispatch(checkOutCart());
   };
 
   return (
@@ -69,39 +58,11 @@ function CartView() {
 
                           <Col>
                             <div className="d-flex align-items-center ">
-                              {/* <button
-                            className="add fw-bold"
-                            onClick={() => {
-                              console.lg('updated');
-                              dispatch(updateCartItem(cartItem.id, cartItem.quantity - 1));
-                            }}
-                          >
-                            -
-                          </button> */}
-                              {/* <input type="text" className="quantity-input" value={cartItem.quantity} />? */}
                               <span className="fw-bold">{cartItem.quantity}</span>
-                              {/* <button
-                            className="sub fw-bold"
-                            onClick={() => {
-                              console.log('updated');
-                              dispatch(updateCartItem(cartItem.id, cartItem.quantity + 1));
-                            }}
-                          >
-                            +
-                          </button> */}
                             </div>
                           </Col>
                           <Col>{`unit price:RS${cartItem.product.unitPrice[0].markedPrice}`}</Col>
                           <Col>{`subtotal:RS.${cartItem.product.unitPrice[0].markedPrice * cartItem.quantity}`}</Col>
-                          {/* <Col>
-                            <div className="delete-btn-box align-items-center">
-                              <FontAwesomeIcon
-                                className="cart-item-delete-btn"
-                                icon={faTrash}
-                                onClick={() => removeProductHandler(cartItem.id)}
-                              />
-                            </div>
-                          </Col> */}
                         </Row>
                       </ListGroup.Item>
                     ))}
@@ -123,6 +84,11 @@ function CartView() {
                 </div>
 
                 <div className="check-out mt-5">
+                  {error && (
+                    <div>
+                      <p className="text-center text-danger">{error[0].message}</p>
+                    </div>
+                  )}
                   {allCartItem && (
                     <div className="row">
                       <div className="coupon-card col-lg-4 col-md-6 p-3">
@@ -157,7 +123,9 @@ function CartView() {
                               Grand total:<span style={{ marginLeft: '110px' }}>{allCartItem.total}</span>
                             </h6>
 
-                            <Button className="btn btn-danger">Check out</Button>
+                            <Button className="btn btn-danger" onClick={() => checkOutHandler()}>
+                              Check out
+                            </Button>
                           </div>
                         </div>
                       </div>

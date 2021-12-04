@@ -1,9 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Sidebar from '../Components/Sidebar';
 import ProductDisplay from '../Components/ProductDisplay';
 
 function GroceriesBody({ products }) {
+  console.log(products);
   return (
     <>
       <div className="products">

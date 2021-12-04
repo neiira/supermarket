@@ -16,17 +16,17 @@ function Team({ teams }) {
         <div className="social-icons caption">
           <ul>
             <li>
-              <a href="#" className="fa fa-facebook facebook">
+              <a href="https://www.facebook.com/" className="fa fa-facebook facebook">
                 {' '}
               </a>
             </li>
             <li>
-              <a href="#" className="fa fa-twitter twitter">
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="fa fa-twitter twitter">
                 {' '}
               </a>
             </li>
             <li>
-              <a href="#" className="fa fa-google-plus googleplus">
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="fa fa-google-plus googleplus">
                 {' '}
               </a>
             </li>

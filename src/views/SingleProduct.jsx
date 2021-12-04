@@ -10,6 +10,7 @@ function SingleProduct() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(productById(id));
+    window.scrollTo(0, 0);
   }, [dispatch, id]);
 
   const productDetails = useSelector(state => state.product);

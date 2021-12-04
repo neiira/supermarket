@@ -8,6 +8,7 @@ function HouseHold() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts());
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   const productList = useSelector(state => state.listProduct);
@@ -19,6 +20,7 @@ function HouseHold() {
   return (
     <>
       <BreadCrumb prevPage="Home" currentPage="Momo" />
+
       <GroceriesBody products={momoProducts} />
     </>
   );

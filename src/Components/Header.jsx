@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { userLogout } from '../actions/userActions';
+import { useDispatch } from 'react-redux';
 import '../Supermarket.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +9,16 @@ import { faCartArrowDown, faSearch, faPhone } from '@fortawesome/free-solid-svg-
 import '../icon/icon.css';
 
 function Header() {
+  const dispatch = useDispatch();
+  const access_token = localStorage.getItem('accessToken');
+  if (access_token) {
+    console.log('user login');
+  }
+
+  const logoutHandler = () => {
+    console.log('hello logout');
+    dispatch(userLogout);
+  };
   return (
     <>
       <div className="agileits_header">
@@ -18,12 +30,28 @@ function Header() {
           </div>
           <div className="agile-login">
             <ul>
-              <li>
-                <Link to="/register"> Create Account </Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
+              {access_token ? (
+                <>
+                  <li>
+                    <Link to="/" onClick={logoutHandler}>
+                      Logout
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/profile">profile</Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/register"> Create Account </Link>
+                  </li>
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                </>
+              )}
+
               <li>
                 <Link to="/contact">Help</Link>
               </li>

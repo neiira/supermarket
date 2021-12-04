@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { homePage } from '../actions/homeActions';
-import Carousel from '../Components/Carousel';
 import BrandsStore from '../Components/BrandsStore';
 import FadeCarousel from '../Components/FadeCarousel';
 import Imagegrid from '../Components/Imagegrid';
@@ -21,7 +20,6 @@ function Home() {
       <FadeCarousel />
       <Category />
       <Topbrands />
-      {/* <Carousel /> */}
       <Imagegrid />
       <BrandsStore />
       <Offers />

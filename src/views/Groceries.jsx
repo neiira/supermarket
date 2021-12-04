@@ -8,6 +8,7 @@ function Groceries() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts());
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   const productList = useSelector(state => state.listProduct);

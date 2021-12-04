@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { removeItemFromCart } from '../actions/cartActions';
 import { updateCartItem } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
-import { ListGroup, Row, Col, Image, Form, Button } from 'react-bootstrap';
+import { ListGroup, Row, Col, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/cart.css';
 import BreadCrumb from '../Components/BreadCrumb';
-
 function Cart() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,16 +29,28 @@ function Cart() {
 
   const gotoOrderHandler = () => {
     navigate('/placeorder');
+    window.location.reload();
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
       <BreadCrumb prevPage="Home" currentPage="Cart" />
       <div className="cart-body p-3">
         <div className="container">
-          <h2>your cart items</h2>
-          {Object.keys(cartItem).length === 0 ? (
-            <div>....loading</div>
+          <h2>Shoping Cart</h2>
+          {cartItems.length === 0 ? (
+            <>
+              <h5 className="mt-5">
+                Your cart is empty
+                <Link to="/" className="text-success">
+                  Go Back
+                </Link>
+              </h5>
+            </>
           ) : (
             <div className="items mt-3">
               <ListGroup variant="flush">
@@ -97,47 +109,6 @@ function Cart() {
               place order
             </button>
           </div>
-
-          {/* <div className="check-out mt-5">
-            <div className="row">
-              <div className="coupon-card col-lg-4 col-md-6 p-3">
-                <div className="coupon-card-wrapper p-5">
-                  <h4 className="pb-2">Use Coupon Code</h4>
-                  <div className="discount-coupon-code">
-                    <p className="pb-3">Please enter coupon if have a one</p>
-                    <Form>
-                      <Form.Group className="pb-3">
-                        <Form.Control type="text" placeholder="your code" />
-                      </Form.Group>
-                      <Button className="btn btn-danger">Apply code</Button>
-                    </Form>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 d-sm-none d-none d-lg-block"></div>
-              <div className="chekc-out-card col-lg-4 col-md-12 p-3">
-                <div className="cart-checkout-wrapper p-5">
-                  <h4 className="pb-2">Cart Total</h4>
-                  <div className="grand-total-box">
-                    <p className="pb-2">
-                      total products:<span style={{ marginLeft: '100px' }}>400</span>
-                    </p>
-                    <p className="pb-2">
-                      Subtotal: <span style={{ marginLeft: '133px' }}>400</span>
-                    </p>
-                    <p className="pb-2">
-                      Delivery charge:<span style={{ marginLeft: '85px' }}>100</span>
-                    </p>
-                    <h6 className="pb-3">
-                      Grand total:<span style={{ marginLeft: '110px' }}>500</span>
-                    </h6>
-
-                    <Button className="btn btn-danger">Check out</Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

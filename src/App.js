@@ -20,6 +20,8 @@ import Cart from './views/Cart';
 import PlaceOrder from './views/PlaceOrder';
 import SingleProduct from './views/SingleProduct';
 import HealthyChoice from './views/HealthyChoice';
+import Profile from './views/Profile';
+import Information from './views/Information';
 
 import ScrollButton from './Components/ScrollButton';
 
@@ -48,6 +50,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/placeorder" element={<PlaceOrder />} />
           <Route path="/healthychoice" element={<HealthyChoice />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:information" element={<Information />} />
 
           <Route path="/product/:slug/:id" element={<SingleProduct />} />
         </Routes>

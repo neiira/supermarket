@@ -4,12 +4,16 @@ import {
   UPDATE_CART_ITEM,
   GET_ALL_CART_ITEM_REQUEST,
   GET_ALL_CART_ITEM_SUCCESS,
-  GET_ALL_CART_ITEM_FAIL
+  GET_ALL_CART_ITEM_FAIL,
+  CHECK_OUT_REQUEST,
+  CHECK_OUT_SUCCESS,
+  CHECK_OUT_FAIL
 } from '../constants/cartConstants';
 import axios from 'axios';
 
 export const addItemToCart = (id, quantity) => async (dispatch, getState) => {
   const url = 'https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product';
+  const access_token = localStorage.getItem('accessToken');
   const bodyData = {
     productId: `${id}`,
     priceId: `${id}`,
@@ -19,8 +23,7 @@ export const addItemToCart = (id, quantity) => async (dispatch, getState) => {
     headers: {
       'Content-Type': 'application/json',
       'Warehouse-Id': '1',
-      Authorization:
-        'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5MTk5M2E3YWZlZDZmNjhhOTRkMTRhNWZlMTAwOGNmOWI1ZDMxNTM0MjcxZjk0ZjE3NDU2ZDVhMGRjNTM4ODZlMWIyNzEwZGE0YWViYjYwIn0.eyJhdWQiOiIyIiwianRpIjoiYjkxOTkzYTdhZmVkNmY2OGE5NGQxNGE1ZmUxMDA4Y2Y5YjVkMzE1MzQyNzFmOTRmMTc0NTZkNWEwZGM1Mzg4NmUxYjI3MTBkYTRhZWJiNjAiLCJpYXQiOjE2Mzg0MzA0MTQsIm5iZiI6MTYzODQzMDQxNCwiZXhwIjoxNjM5Mjk0NDE0LCJzdWIiOiIyMzMiLCJzY29wZXMiOltdfQ.cOMYtaN7tbUEGSoLHC2pHW0Q2Ph-GNF1ClJebDfuIY6viuVLNVe1ZGZKHQLIsxeLEdaB1ARQf9sM0q-X2wTs4pHMAVj8z39EBgZRrdYuHpFXhC1Gq8LrnviKFRVxgHVm05oXEG2fdEIuIJUuBYmJ1EtDLfNaWzBuBwdIaU4n4fqwedVt70namJyKhn2nTVplpvE-Qqefg4psYo32FgJQG-f-cIC7lkfxH-NFRZ58jT4Qr3azN5fPQM7OKjSZa4nXytoUr-mb_oy5lX7geh7wdr6oLDA2Wl4FK046gNZJKY9sTu2hY6-eOlbhazFXsieyQg_rU-OHRI7VtTULSfs7I2_7wwTrP-50O4y9J6giEXxAqZAqd8Y2kVJdjgPxLGz_YrSV8Css9l_VdH8f7-vbvYQZMMfHAceYC5YsuBc4SfS5X3ag4hAlLV_oItuYR-I5MDK_QqbE1N9fuimXqoJKJkWgcgKxg_CS-C5IS0DUgtM9zZHFsWOnuqjEySiIgV8oJ77wr686ApA5rlZh96iggT6PHAJGmUkBt4JWq2Iak-TNCAvSmz_ytAJmztuivBjjoRUdmENxSjQRDWDHgOkFfP4zSwCe7pI2zly0uRx2L5L2YrWnSKD5H8KR3qwevyvuDeq1rNjHbGxdVnCdOQPAGDGJrx7Gw-EXM59-66hroXc',
+      Authorization: `Bearer ${access_token} `,
       'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545'
     }
   });
@@ -45,12 +48,13 @@ export const addItemToCart = (id, quantity) => async (dispatch, getState) => {
 export const removeItemFromCart = cartProductId => async (dispatch, getState) => {
   const url = 'https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product';
 
+  const access_token = localStorage.getItem('accessToken');
+
   const response = await axios.delete(`${url}/${cartProductId}`, {
     headers: {
       'Content-Type': 'application/json',
       'Warehouse-Id': '1',
-      Authorization:
-        'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5MTk5M2E3YWZlZDZmNjhhOTRkMTRhNWZlMTAwOGNmOWI1ZDMxNTM0MjcxZjk0ZjE3NDU2ZDVhMGRjNTM4ODZlMWIyNzEwZGE0YWViYjYwIn0.eyJhdWQiOiIyIiwianRpIjoiYjkxOTkzYTdhZmVkNmY2OGE5NGQxNGE1ZmUxMDA4Y2Y5YjVkMzE1MzQyNzFmOTRmMTc0NTZkNWEwZGM1Mzg4NmUxYjI3MTBkYTRhZWJiNjAiLCJpYXQiOjE2Mzg0MzA0MTQsIm5iZiI6MTYzODQzMDQxNCwiZXhwIjoxNjM5Mjk0NDE0LCJzdWIiOiIyMzMiLCJzY29wZXMiOltdfQ.cOMYtaN7tbUEGSoLHC2pHW0Q2Ph-GNF1ClJebDfuIY6viuVLNVe1ZGZKHQLIsxeLEdaB1ARQf9sM0q-X2wTs4pHMAVj8z39EBgZRrdYuHpFXhC1Gq8LrnviKFRVxgHVm05oXEG2fdEIuIJUuBYmJ1EtDLfNaWzBuBwdIaU4n4fqwedVt70namJyKhn2nTVplpvE-Qqefg4psYo32FgJQG-f-cIC7lkfxH-NFRZ58jT4Qr3azN5fPQM7OKjSZa4nXytoUr-mb_oy5lX7geh7wdr6oLDA2Wl4FK046gNZJKY9sTu2hY6-eOlbhazFXsieyQg_rU-OHRI7VtTULSfs7I2_7wwTrP-50O4y9J6giEXxAqZAqd8Y2kVJdjgPxLGz_YrSV8Css9l_VdH8f7-vbvYQZMMfHAceYC5YsuBc4SfS5X3ag4hAlLV_oItuYR-I5MDK_QqbE1N9fuimXqoJKJkWgcgKxg_CS-C5IS0DUgtM9zZHFsWOnuqjEySiIgV8oJ77wr686ApA5rlZh96iggT6PHAJGmUkBt4JWq2Iak-TNCAvSmz_ytAJmztuivBjjoRUdmENxSjQRDWDHgOkFfP4zSwCe7pI2zly0uRx2L5L2YrWnSKD5H8KR3qwevyvuDeq1rNjHbGxdVnCdOQPAGDGJrx7Gw-EXM59-66hroXc',
+      Authorization: `Bearer ${access_token} `,
       'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545'
     }
   });
@@ -67,6 +71,8 @@ export const removeItemFromCart = cartProductId => async (dispatch, getState) =>
 
 export const updateCartItem = (cartProductId, updatedQuantity) => async (dispatch, getState) => {
   const url = 'https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product';
+
+  const access_token = localStorage.getItem('accessToken');
   const bodyData = {
     quantity: `${updatedQuantity}`
   };
@@ -74,8 +80,7 @@ export const updateCartItem = (cartProductId, updatedQuantity) => async (dispatc
     headers: {
       'Content-Type': 'application/json',
       'Warehouse-Id': '1',
-      Authorization:
-        'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5MTk5M2E3YWZlZDZmNjhhOTRkMTRhNWZlMTAwOGNmOWI1ZDMxNTM0MjcxZjk0ZjE3NDU2ZDVhMGRjNTM4ODZlMWIyNzEwZGE0YWViYjYwIn0.eyJhdWQiOiIyIiwianRpIjoiYjkxOTkzYTdhZmVkNmY2OGE5NGQxNGE1ZmUxMDA4Y2Y5YjVkMzE1MzQyNzFmOTRmMTc0NTZkNWEwZGM1Mzg4NmUxYjI3MTBkYTRhZWJiNjAiLCJpYXQiOjE2Mzg0MzA0MTQsIm5iZiI6MTYzODQzMDQxNCwiZXhwIjoxNjM5Mjk0NDE0LCJzdWIiOiIyMzMiLCJzY29wZXMiOltdfQ.cOMYtaN7tbUEGSoLHC2pHW0Q2Ph-GNF1ClJebDfuIY6viuVLNVe1ZGZKHQLIsxeLEdaB1ARQf9sM0q-X2wTs4pHMAVj8z39EBgZRrdYuHpFXhC1Gq8LrnviKFRVxgHVm05oXEG2fdEIuIJUuBYmJ1EtDLfNaWzBuBwdIaU4n4fqwedVt70namJyKhn2nTVplpvE-Qqefg4psYo32FgJQG-f-cIC7lkfxH-NFRZ58jT4Qr3azN5fPQM7OKjSZa4nXytoUr-mb_oy5lX7geh7wdr6oLDA2Wl4FK046gNZJKY9sTu2hY6-eOlbhazFXsieyQg_rU-OHRI7VtTULSfs7I2_7wwTrP-50O4y9J6giEXxAqZAqd8Y2kVJdjgPxLGz_YrSV8Css9l_VdH8f7-vbvYQZMMfHAceYC5YsuBc4SfS5X3ag4hAlLV_oItuYR-I5MDK_QqbE1N9fuimXqoJKJkWgcgKxg_CS-C5IS0DUgtM9zZHFsWOnuqjEySiIgV8oJ77wr686ApA5rlZh96iggT6PHAJGmUkBt4JWq2Iak-TNCAvSmz_ytAJmztuivBjjoRUdmENxSjQRDWDHgOkFfP4zSwCe7pI2zly0uRx2L5L2YrWnSKD5H8KR3qwevyvuDeq1rNjHbGxdVnCdOQPAGDGJrx7Gw-EXM59-66hroXc',
+      Authorization: `Bearer ${access_token} `,
       'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545'
     }
   });
@@ -97,6 +102,8 @@ export const updateCartItem = (cartProductId, updatedQuantity) => async (dispatc
 
 export const AllCartItem = () => async dispatch => {
   const url = 'https://uat.ordering-boafresh.ekbana.net//api/v4/cart';
+
+  const access_token = localStorage.getItem('accessToken');
   try {
     dispatch({ type: GET_ALL_CART_ITEM_REQUEST });
     const response = await axios.get(url, {
@@ -104,8 +111,7 @@ export const AllCartItem = () => async dispatch => {
         'Content-Type': 'application/json',
         'Warehouse-Id': '1',
         'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
-        Authorization:
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5MTk5M2E3YWZlZDZmNjhhOTRkMTRhNWZlMTAwOGNmOWI1ZDMxNTM0MjcxZjk0ZjE3NDU2ZDVhMGRjNTM4ODZlMWIyNzEwZGE0YWViYjYwIn0.eyJhdWQiOiIyIiwianRpIjoiYjkxOTkzYTdhZmVkNmY2OGE5NGQxNGE1ZmUxMDA4Y2Y5YjVkMzE1MzQyNzFmOTRmMTc0NTZkNWEwZGM1Mzg4NmUxYjI3MTBkYTRhZWJiNjAiLCJpYXQiOjE2Mzg0MzA0MTQsIm5iZiI6MTYzODQzMDQxNCwiZXhwIjoxNjM5Mjk0NDE0LCJzdWIiOiIyMzMiLCJzY29wZXMiOltdfQ.cOMYtaN7tbUEGSoLHC2pHW0Q2Ph-GNF1ClJebDfuIY6viuVLNVe1ZGZKHQLIsxeLEdaB1ARQf9sM0q-X2wTs4pHMAVj8z39EBgZRrdYuHpFXhC1Gq8LrnviKFRVxgHVm05oXEG2fdEIuIJUuBYmJ1EtDLfNaWzBuBwdIaU4n4fqwedVt70namJyKhn2nTVplpvE-Qqefg4psYo32FgJQG-f-cIC7lkfxH-NFRZ58jT4Qr3azN5fPQM7OKjSZa4nXytoUr-mb_oy5lX7geh7wdr6oLDA2Wl4FK046gNZJKY9sTu2hY6-eOlbhazFXsieyQg_rU-OHRI7VtTULSfs7I2_7wwTrP-50O4y9J6giEXxAqZAqd8Y2kVJdjgPxLGz_YrSV8Css9l_VdH8f7-vbvYQZMMfHAceYC5YsuBc4SfS5X3ag4hAlLV_oItuYR-I5MDK_QqbE1N9fuimXqoJKJkWgcgKxg_CS-C5IS0DUgtM9zZHFsWOnuqjEySiIgV8oJ77wr686ApA5rlZh96iggT6PHAJGmUkBt4JWq2Iak-TNCAvSmz_ytAJmztuivBjjoRUdmENxSjQRDWDHgOkFfP4zSwCe7pI2zly0uRx2L5L2YrWnSKD5H8KR3qwevyvuDeq1rNjHbGxdVnCdOQPAGDGJrx7Gw-EXM59-66hroXc'
+        Authorization: `Bearer ${access_token} `
       }
     });
     dispatch({
@@ -124,5 +130,27 @@ export const AllCartItem = () => async dispatch => {
     });
   } catch (error) {
     dispatch({ type: GET_ALL_CART_ITEM_FAIL, payload: error });
+  }
+};
+
+export const checkOutCart = () => async dispatch => {
+  const url = 'https://uat.ordering-boafresh.ekbana.net//api/v4/cart/checkout';
+  const access_token = localStorage.getItem('accessToken');
+  try {
+    dispatch({ type: CHECK_OUT_REQUEST });
+    const response = await axios.delete(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        DeliveryId: '75',
+        PaymentMethodId: '1',
+        Authorization: `Bearer ${access_token} `,
+        'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545'
+      }
+    });
+    dispatch({ type: CHECK_OUT_SUCCESS, payload: response.data.data });
+    localStorage.removeItem('cartItems');
+    document.location.href = '/';
+  } catch (error) {
+    dispatch({ type: CHECK_OUT_FAIL, payload: error.response && error.response.data.errors });
   }
 };

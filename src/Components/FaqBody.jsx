@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeader from '../Components/SectionHeader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Supermarket.css';
-import { Accordion, Card, Nav } from 'react-bootstrap';
+import { Accordion, Nav } from 'react-bootstrap';
 function FaqBody() {
   const Qnas = [
     {

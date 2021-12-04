@@ -28,80 +28,80 @@ function Sidebar() {
                 </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/products">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Chicken (Steam) Momo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/products">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Chicken (Chilli) Momo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Veg (Chilli) Momo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Veg (Kothe) Momo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Veg (Steam) Momo
-                </a>
+                </Link>
               </li>
             </ul>
             <li>
-              <a href="products.html">
+              <Link to="/productss">
                 <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                 NOODLES
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Veg Noodles
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Chicken Noodles
-                </a>
+                </Link>
               </li>
             </ul>
             <li>
-              <a href="products.html">
+              <Link to="/productss">
                 <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                 CHILLI
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Chicken Chilli
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Mushroom Chilli
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="products.html">
+                <Link to="/productss">
                   <FontAwesomeIcon icon={faArrowRight} className="arrow-right" />
                   Paneer Chilli
-                </a>
+                </Link>
               </li>
             </ul>
           </ul>

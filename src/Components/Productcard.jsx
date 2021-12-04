@@ -10,13 +10,13 @@ import offer from '../images/offer.png';
 
 function Productcard({ products }) {
   const { title, unitPrice, ratings, hasOffer, images, slug, id } = products;
-  const [{ markedPrice, sellingPrice }] = unitPrice;
+  const [{ markedPrice }] = unitPrice;
   const [{ imageName }] = images;
   // console.log(products);
 
   return (
     <>
-      <div className=" top_brand_left">
+      <div className=" top_brand_left" key={id}>
         <div className="hover14 column">
           <div className="agile_top_brand_left_grid">
             {hasOffer && (
@@ -28,9 +28,9 @@ function Productcard({ products }) {
               <figure>
                 <div className="snipcart-item block">
                   <div className="snipcart-thumb">
-                    <a href="products.html">
+                    <Link to="/products">
                       <img title="" src={imageName} alt="noimage" className="img-responsive" width="200" height="200" />
-                    </a>
+                    </Link>
                     <p>{title}</p>
                     <div className="stars">
                       {

@@ -1,0 +1,16 @@
+.profile-body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-content-box {
+  background-color: #fe9126;
+}
+
+.profile-content-box:hover {
+  background-color: skyblue;
+}
+
+.information-content {
+  width: 400px;
+}
