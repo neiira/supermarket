@@ -49,7 +49,7 @@ function profile() {
                       className="text-white d-flex flex-column align-items-center nav-link"
                     >
                       <FontAwesomeIcon icon={faKey} />
-                      <h3>Change password</h3>
+                      <h3>Chnage password</h3>
                     </Link>
                   </div>
                 </div>
